@@ -14,6 +14,7 @@ set(SOURCES
   ex1.20
   ex1.21
   ex1.22
+  ex1.23
   ex1.25
 )
 
