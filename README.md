@@ -8,7 +8,7 @@ $ mkdir build && cd build
 $ cmake ..
 $ make
 ```
-Executables will bin in the bin directory.
+Executables will be located in the bin directory.
 
 ### Contents
 - [Chapter 1. Getting Started](https://github.com/wastegas/CPP-Primer/tree/master/src/ch01)
