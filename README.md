@@ -1,5 +1,5 @@
 # C++ Primer, Fifth Edition
-Revisiting my old book, never got to finish it and previous PC crashed. I will slowly post solutions as complete each section.
+Revisiting my old book, never got to finish it and previous PC crashed. I will slowly post solutions that require coding as I work through each section.
 ### To compile
 You will need [CMake](https://cmake.org)
 ```
