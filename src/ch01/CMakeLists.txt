@@ -4,6 +4,7 @@ set(SOURCES
   ex1.3
   ex1.4
   ex1.5
+  ex1.9
 )
 
 foreach(SOURCE ${SOURCES})
