@@ -1,6 +1,6 @@
 #include <iostream>
 
-struct Foo { /* empty */ }
+struct Foo { /* empty */ }; // added ; so make will not error out
 
 // will not compile expected ';' after struct definition
 
