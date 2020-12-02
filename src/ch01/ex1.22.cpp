@@ -3,7 +3,7 @@
 
 int main()
 {
-  Sales_item sum, currItem, item;
+  Sales_item sum, item;
 
   while (std::cin >> item) {
     sum += item;
