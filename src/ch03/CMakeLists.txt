@@ -8,6 +8,8 @@ set (SOURCES
   ex3.1g
   ex3.2a
   ex3.2b
+  ex3.4a
+  ex3.4b
   )
 
 foreach(SOURCE ${SOURCES})
