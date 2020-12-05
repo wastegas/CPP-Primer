@@ -29,7 +29,7 @@ set (SOURCES
   ex3.30
   ex3.31
   ex3.36
-
+  ex3.39
   )
 
 foreach(SOURCE ${SOURCES})
