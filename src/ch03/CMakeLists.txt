@@ -20,6 +20,7 @@ set (SOURCES
   ex3.15
   ex3.16
   ex3.17
+  ex3.20
   )
 
 foreach(SOURCE ${SOURCES})
