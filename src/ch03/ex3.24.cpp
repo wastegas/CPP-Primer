@@ -31,7 +31,7 @@ int main()
   cout << endl;
 
   auto beg = ivec.begin();
-  auto end = ivec.end() -1 ;
+  auto end = ivec.end() -1;
   cout << "sum of first and last element: " << *beg + *end
        << endl;
 
