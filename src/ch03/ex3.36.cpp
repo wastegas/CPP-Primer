@@ -14,15 +14,15 @@ int main()
   int arr2[] = {0, 1, 9, 3, 4, 5};
   int *p1 = arr1;
   int *p2 = arr2;
-  auto end = end(arr1);
+  auto end1 = end(arr1);
 
-  for (; p1 != end; p1++) {
+  for (; p1 != end1; p1++) {
     if (*p1 != *p2) {
       break;
     }
     ++p2;
   }
-  if (p1 == end)
+  if (p1 == end1)
     cout << "arr1 and arr2 are equal" << endl;
   else
     cout << "arr1 and arr2 are not equal" << endl;
