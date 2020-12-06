@@ -5,6 +5,8 @@ set (SOURCES
   ex6.7
   )
 
+add_executable(ex6.9 ex6.9.cpp fact.cpp)
+
 foreach(SOURCE ${SOURCES})
   add_executable(${SOURCE} ${SOURCE}.cpp)
 endforeach(SOURCE)
