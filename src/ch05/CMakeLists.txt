@@ -1,5 +1,6 @@
 set (SOURCES
   ex5.1
+  ex5.5
   )
 
 foreach(SOURCE ${SOURCES})
