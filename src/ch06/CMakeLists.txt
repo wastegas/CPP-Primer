@@ -12,6 +12,7 @@ set (SOURCES
   ex6.23
   ex6.25
   ex6.26
+  ex6.27
   )
 
 add_executable(ex6.9 ex6.9.cpp fact.cpp)
