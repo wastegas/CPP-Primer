@@ -6,7 +6,8 @@ using std::end;
 
 int a[] = {0, 1, 2};
 
-decltype(a) &arrRef()
+// add inline exercise 6.45
+inline decltype(a) &arrRef()
 {
   return a;
 }
