@@ -7,17 +7,17 @@ using std::end;
 int a[] = {0, 1, 2};
 using arr3 = int[3];
 
-int (&arrRef())[3]
+inline int (&arrRef())[3]
 {
   return a;
 }
 
-arr3& getarr()
+inline arr3& getarr()
 {
   return a;
 }
 
-auto arr3t() -> int(&)[3]
+inline auto arr3t() -> int(&)[3]
 {
   return a;
 }
