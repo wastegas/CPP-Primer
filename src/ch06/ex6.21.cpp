@@ -3,11 +3,10 @@
 using std::cin;   using std::cout;
 using std::endl;
 
-int bigger(const int &a, const int *b)
+// added inline excercise 6.45
+inline int bigger(const int &a, const int *b)
 {
-  if (a > *(b))
-    return a;
-  return *(b);
+  return (a > *(b)) ? a : *(b);
 }
 
 int main()
