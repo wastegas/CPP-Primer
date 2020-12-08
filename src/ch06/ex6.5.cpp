@@ -3,12 +3,9 @@
 using std::cin;    using std::cout;
 using std::endl;
 
-int absolute(int n)
+inline int absolute(int n)
 {
-  if (n < 0)
-    return n * -1;
-
-  return n;
+  return n < 0 ? n * -1 : n;
 }
 
 int main()
