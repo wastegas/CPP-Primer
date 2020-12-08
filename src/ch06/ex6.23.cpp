@@ -4,8 +4,8 @@
 using std::cout;
 using std::endl;
 
-
-void print(const int *n)
+// added inline excercise 6.45
+inline void print(const int *n)
 {
   cout << *n << endl;
 }
