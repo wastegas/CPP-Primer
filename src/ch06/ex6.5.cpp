@@ -3,6 +3,7 @@
 using std::cin;    using std::cout;
 using std::endl;
 
+// added inline excercise 6.45
 inline int absolute(int n)
 {
   return n < 0 ? n * -1 : n;
