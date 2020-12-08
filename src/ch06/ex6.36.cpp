@@ -5,7 +5,7 @@ using std::cout; using std::endl;
 using std::end;
 
 int a[] = {0, 1, 2};
-int (&arrRef())[3]
+inline int (&arrRef())[3]
 {
   return a;
 }
