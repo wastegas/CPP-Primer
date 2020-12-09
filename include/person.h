@@ -2,11 +2,12 @@
 #define PERSON_H
 #include <string>
 
-// exercise 7.4
 class Person
 {
-  std::string name;
-  std::string address;
+  std::string name() const { return this->PersonName; }       // ex 7.5
+  std::string address() const { return this->PersonAddress; } // ex 7.5
+  std::string PersonName;
+  std::string PersonAddress;
 }
 
 
