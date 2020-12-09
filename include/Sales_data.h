@@ -3,6 +3,7 @@
  * Exercise 7.2 add isbn() and combine() member functions
  * Exercise 7.6 add read, print and add nonmember functions
  * Exercise 7.11 add constructors
+ * Exercise 7.14 own version of default constructor
  */
 #ifndef SALES_DATA_H
 #define SALES_DATA_H
@@ -10,7 +11,7 @@
 #include <string>
 
 struct Sales_data {
-  Sales_data() = default;                           // exercise 7.11
+  Sales_data() {units_sold = 0; revenue = 0;}       // exercise 7.14
   Sales_data(const std::string &s) : bookNo(s) {}   // exercise 7.11
   Sales_data(const std::string &s, unsigned n, double p) :
     bookNo(s), units_sold(n), revenue(n * p) {}     // exercise 7.11
