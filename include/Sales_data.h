@@ -2,6 +2,7 @@
  * Change log
  * Exercise 7.2 add isbn() and combine() member functions
  * Exercise 7.6 add read, print and add nonmember functions
+ * Exercise 7.11 add constructors
  */
 #ifndef SALES_DATA_H
 #define SALES_DATA_H
@@ -9,12 +10,22 @@
 #include <string>
 
 struct Sales_data {
+  Sales_data() = default;                           // exercise 7.11
+  Sales_data(const std::string &s) : bookNo(s) {}   // exercise 7.11
+  Sales_data(const std::string &s, unsigned n, double p) :
+    bookNo(s), units_sold(n), revenue(n * P) {}     // exercise 7.11
+  Sales_data(std::istream&);                        // exercise 7.11
   std::string isbn() const { return this->bookNo; } // exercise 7.2
   Sales_data& combine(const Sales_data&);           // exercise 7.2
   std::string bookNo;
   unsigned units_sold = 0;
   double revenue = 0.0;
 };
+
+Sales_data Sales_data(std::istream &is)
+{
+  read(is, *this); // read will  read  a transaction from  is  into this object
+}
 
 std::istream &read(std::istream &is, Sales_data &data)
 {
