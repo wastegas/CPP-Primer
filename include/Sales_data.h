@@ -13,7 +13,7 @@ struct Sales_data {
   Sales_data() = default;                           // exercise 7.11
   Sales_data(const std::string &s) : bookNo(s) {}   // exercise 7.11
   Sales_data(const std::string &s, unsigned n, double p) :
-    bookNo(s), units_sold(n), revenue(n * P) {}     // exercise 7.11
+    bookNo(s), units_sold(n), revenue(n * p) {}     // exercise 7.11
   Sales_data(std::istream&);                        // exercise 7.11
   std::string isbn() const { return this->bookNo; } // exercise 7.2
   Sales_data& combine(const Sales_data&);           // exercise 7.2
@@ -21,8 +21,9 @@ struct Sales_data {
   unsigned units_sold = 0;
   double revenue = 0.0;
 };
+std::istream &read(std::istream&, Sales_data&);
 
-Sales_data Sales_data(std::istream &is)
+Sales_data::Sales_data(std::istream &is)
 {
   read(is, *this); // read will  read  a transaction from  is  into this object
 }
