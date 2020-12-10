@@ -5,6 +5,7 @@
  * Exercise 7.5: add operations to return name and address
  * Exercise 7.9: add read and print operations
  * Exercise 7.15: add constructors
+ * Exercise 7.22: update to hide implementation
  */
 #ifndef PERSON_H
 #define PERSON_H
@@ -13,12 +14,14 @@
 
 class Person
 {
+public:
   Person() = default;
   Person(const std::string &n, const std::string &a) :
     PersonName(n), PersonAddress(a) {}
   Person(std::istream&);
   std::string name() const { return this->PersonName; }       
-  std::string address() const { return this->PersonAddress; } 
+  std::string address() const { return this->PersonAddress; }
+private:
   std::string PersonName;
   std::string PersonAddress;
 };
