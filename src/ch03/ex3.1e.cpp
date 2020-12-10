@@ -1,10 +1,15 @@
 #include <iostream>
-#include "Sales_data.h"
 
 using std::cout;
 using std::cin;
 using std::cerr;
 using std::endl;
+
+struct Sales_data {
+  std::string bookNo;
+  unsigned units_sold;
+  double revenue;
+};
 
 int main()
 {
