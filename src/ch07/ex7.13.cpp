@@ -9,10 +9,7 @@ int main()
   double price = 0;
   
   Sales_data currItem(cin);
-  if (currItem.units_sold == 0) {
-    cerr << "(no sales?)" << endl;
-    return -1;
-  }
+
   while(cin) {
     Sales_data item(cin);
     if(currItem.isbn() == item.isbn()) {
