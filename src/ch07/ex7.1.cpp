@@ -1,5 +1,13 @@
 #include <iostream>
-#include "Sales_data.h"
+#include <string>
+
+struct Sales_data {
+
+  std::string bookNo;
+  unsigned units_sold = 0;
+  double revenue = 0.0;
+
+};
 
 void print(const Sales_data &data)
 {
