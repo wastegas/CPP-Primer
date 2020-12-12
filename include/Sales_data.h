@@ -18,18 +18,15 @@ class Sales_data {
   friend std::ostream &print(std::ostream&, const Sales_data&);
   friend Sales_data add(const Sales_data&, const Sales_data&);
 public:
-  Sales_data() { std::cout << "default constructor" << std::endl; };      
-  Sales_data(const std::string &s) : Sales_data(s, 0, 0) { std::cout << "deletegated string constructor" << std::endl; }   // exercise 7.41
+  Sales_data() = default;      
+  Sales_data(const std::string &s) : Sales_data(s, 0, 0) { }
   Sales_data(const std::string &s, unsigned n, double p) :
-    bookNo(s), units_sold(n), revenue(n * p) {}     // exercise 7.11
-  Sales_data(std::istream &is): Sales_data()
-  { std::cout << "delegated istream constructor" << std::endl;
-    read(is, *this);
-  } // Exercise 7.41
-  std::string isbn() const { return this->bookNo; } // exercise 7.2
-  Sales_data& combine(const Sales_data&);           // exercise 7.2
-  inline double avg_price() { return revenue / units_sold; } // excercise 7.26
-private:                                            // exercise 7.21
+    bookNo(s), units_sold(n), revenue(n * p) {}
+  Sales_data(std::istream &is): Sales_data() { read(is, *this); }
+  std::string isbn() const { return this->bookNo; }
+  Sales_data& combine(const Sales_data&);          
+  inline double avg_price() { return revenue / units_sold; }
+private:                                      
   std::string bookNo;
   unsigned units_sold = 0;
   double revenue = 0.0;
