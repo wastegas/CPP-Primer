@@ -6,6 +6,7 @@
  * Exercise 7.14 own version of default constructor
  * Exercise 7.21 convert to class and hide implementation
  * Exercise 7.26 add avg_price function
+ * Exercise 7.41 rewrite constructors to use delegation
  */
 #ifndef SALES_DATA_H
 #define SALES_DATA_H
@@ -17,11 +18,11 @@ class Sales_data {
   friend std::ostream &print(std::ostream&, const Sales_data&);
   friend Sales_data add(const Sales_data&, const Sales_data&);
 public:
-  Sales_data() {units_sold = 0; revenue = 0;}       // exercise 7.14
-  Sales_data(const std::string &s) : bookNo(s) {}   // exercise 7.11
+  Sales_data() = default;      
+  Sales_data(const std::string &s) : Sales_data(s, 0, 0) {}   // exercise 7.41
   Sales_data(const std::string &s, unsigned n, double p) :
     bookNo(s), units_sold(n), revenue(n * p) {}     // exercise 7.11
-  Sales_data(std::istream&);                        // exercise 7.11
+  Sales_data(std::istream &is): Sales_data() { read(is, *this); }; // Exercise 7.41
   std::string isbn() const { return this->bookNo; } // exercise 7.2
   Sales_data& combine(const Sales_data&);           // exercise 7.2
   inline double avg_price() { return revenue / units_sold; } // excercise 7.26
@@ -33,11 +34,6 @@ private:                                            // exercise 7.21
 std::istream &read(std::istream&, Sales_data&);
 std::ostream &print(std::ostream&, const Sales_data&);
 Sales_data add(const Sales_data&, const Sales_data&);
-
-Sales_data::Sales_data(std::istream &is)
-{
-  read(is, *this); // read will  read  a transaction from  is  into this object
-}
 
 std::istream &read(std::istream &is, Sales_data &data)
 {
