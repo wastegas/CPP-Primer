@@ -5,6 +5,7 @@
  * Exercise 7.11 add constructors
  * Exercise 7.14 own version of default constructor
  * Exercise 7.21 convert to class and hide implementation
+ * Exercise 7.26 add avg_price function
  */
 #ifndef SALES_DATA_H
 #define SALES_DATA_H
@@ -23,6 +24,7 @@ public:
   Sales_data(std::istream&);                        // exercise 7.11
   std::string isbn() const { return this->bookNo; } // exercise 7.2
   Sales_data& combine(const Sales_data&);           // exercise 7.2
+  inline double avg_price() { return revenue / units_sold; } // excercise 7.26
 private:                                            // exercise 7.21
   std::string bookNo;
   unsigned units_sold = 0;
