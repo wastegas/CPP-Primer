@@ -40,9 +40,9 @@ int main(int argc, char **argv)
   }
   infile.close();
 
-  for (auto &r : people) {
+  for (const auto &r : people) {
     cout << "Name: " << r.name << endl;
-    for (auto &p : r.phones)
+    for (const auto &p : r.phones)
       cout << "Phone: " << p << endl;
   }
   
