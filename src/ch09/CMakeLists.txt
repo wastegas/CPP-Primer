@@ -12,6 +12,9 @@ set (SOURCES
   ex9.28
   ex9.31
   ex9.38
+  ex9.41
+  ex9.42
+  ex9.43
   )
 
 foreach(SOURCE ${SOURCES})
