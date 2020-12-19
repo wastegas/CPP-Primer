@@ -2,6 +2,8 @@
 Revisiting my old book, never got to finish it and previous PC crashed. I will slowly post solutions that require coding as I work through each section.
 ### To compile
 You will need [CMake](https://cmake.org)
+
+In a terminal shell, type the following:
 ```
 $ mkdir bin
 $ mkdir build && cd build
