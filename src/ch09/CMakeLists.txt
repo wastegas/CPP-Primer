@@ -21,9 +21,9 @@ set (SOURCES
   ex9.47
   ex9.49
   ex9.50
+  ex9.51
   )
 
 foreach(SOURCE ${SOURCES})
   add_executable(${SOURCE} ${SOURCE}.cpp)
 endforeach(SOURCE)
-
