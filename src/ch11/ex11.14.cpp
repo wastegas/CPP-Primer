@@ -14,7 +14,8 @@ int main()
   cout << "Enter lastname: " << endl;
   while(cin >> family_name) {
     family[family_name];
-    cout << "Enter childrens names, end with '!' for name and age" << endl;
+    cout << "Enter childrens names followed by age, end with '!' for name and age"
+	 << endl;
     while(cin >> children >> age){
       if (children == "!")
 	break;
